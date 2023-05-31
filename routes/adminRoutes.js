@@ -16,4 +16,10 @@ router.post(
   adminController.login
 );
 
+router.post(
+  "/refresh",
+  joiSchemaValidation.validateBody(adminSchema.refresh),
+  adminController.refresh
+);
+
 module.exports = router;

@@ -8,6 +8,7 @@ module.exports.signup = async (req, res) => {
     response.status = 200;
     response.message = constants.adminMessage.SIGNUP_SUCCESS;
     response.body = responseFromService;
+    console.log(response.body);
   } catch (error) {
     console.log("Something went wrong: adminController: signup", error);
     response.message = error.message;
@@ -24,6 +25,20 @@ module.exports.login = async (req, res) => {
     response.body = responseFromService;
   } catch (error) {
     console.log("Something went wrong: adminController: login", error);
+    response.message = error.message;
+  }
+  return res.status(response.status).send(response);
+};
+
+module.exports.refresh = async (req, res) => {
+  let response = { ...constants.defaultServerResponse };
+  try {
+    const responseFromService = await adminService.refresh(req.body);
+    response.status = 200;
+    response.message = constants.adminMessage.REFRESH_SUCCESS;
+    response.body = responseFromService;
+  } catch (error) {
+    console.log("Something went wrong: adminController: refresh", error);
     response.message = error.message;
   }
   return res.status(response.status).send(response);

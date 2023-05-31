@@ -38,6 +38,9 @@ module.exports = {
     DUPLICATED_EMAIL: "User already exists with given email",
     USER_NOT_FOUND: "User not found",
     INVALID_PASSWORD: "Invalid password",
+    INVALID_REFRESH_TOKEN: "Invalid refresh token",
+    REFRESH_TOKEN_MISSING: "Refresh Token is missing",
+    REFRESH_SUCCESS: "Refresh Token Success",
   },
   requestValidationMessage: {
     BAD_REQUEST: "Invalid fields",

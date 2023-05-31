@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/product", require("./routes/productRoutes"));
-app.use("/api/v1/admin", require("./routes/adminRoutes"));
+app.use("/api/v1/auth/admin", require("./routes/adminRoutes"));
 app.use("/api/v1/event", require("./routes/eventRoutes"));
 app.use("/api/v1/user", require("./routes/userRoutes"));
 app.use("/api/v1/ticket", require("./routes/ticketRoutes"));

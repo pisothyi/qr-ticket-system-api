@@ -15,4 +15,5 @@ router.delete(
   tokenValidation.validateToken,
   eventController.deleteEvent
 );
+
 module.exports = router;

@@ -7,6 +7,7 @@ const adminSchema = new mongoose.Schema(
     email: String,
     password: String,
     role: String,
+    refreshToken: String,
   },
   {
     timestamps: false,

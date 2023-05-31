@@ -4,7 +4,7 @@ const constants = require("../constants");
 module.exports.createTicket = async (req, res) => {
   let response = { ...constants.defaultServerResponse };
   try {
-    const responseFromService = await ticketService.createEvent(req.body);
+    const responseFromService = await ticketService.createTicket(req.body);
     response.status = 200;
     response.message = constants.ticketMessage.TICKET_CREATED;
     response.body = responseFromService;
